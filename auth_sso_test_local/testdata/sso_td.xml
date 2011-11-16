@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testdata>
+    <itemgroup name="GetAuthExceptions">
+        <item name="UnknownSubdomain" error_description="Unknown subdomain." error="invalid_subdomain">
+            <description>The exception is about unkown subdomain name is passed on</description>
+        </item>
+    </itemgroup>
+    <itemgroup name="AuthGetAuthExceptions">
+        <item name="UnknownSubdomain" error_description="Unknown subdomain." error="invalid_subdomain">
+            <description>The exception is about unkown subdomain name is passed on</description>
+        </item>
+        <item name="EmptySubdomain" error_description="SSO error Failed with 404 Not Found" error="server_error">
+            <description>The exception is about empty subdomain name is passed on</description>
+        </item>
+        <item name="UnknownResponseType" error_description="Unknown response type [%s]." error="invalid_request">
+            <description>The exception is about unkown response type is passed on</description>
+        </item>
+        <item name="UnknownClient" error_description="Invalid client credentials." error="invalid_client">
+        <description>The exception is about unauthorized client name is passed on</description>
+        </item>
+        <item name="UnmatchedURI" error_description="Unmatched redirect_uri." error="invalid_request">
+        <description>The exception is about unmatched URI is passed on</description>
+        </item>
+        <item name="MissingURI" error_description="redirect_uri is missing." error="invalid_request">
+        <description>The exception is about client's URI is empty and the request should fill in the URI but didn't</description>
+        </item>
+    </itemgroup>
+    <itemgroup name="AuthGetConfigExceptions">
+        <item name="UnknownClient" error_description="Invalid client credentials." error="invalid_client">
+            <description>The exception is about unkown client is passed on</description>
+        </item>
+        <item name="EmptySubdomain" error_description="SSO error Failed with 404 Not Found" error="server_error">
+            <description>The exception is about empty subdomain name is passed on</description>
+        </item>
+        <item name="UnknownSubdomain" error_description="Unknown subdomain." error="invalid_subdomain">
+            <description>The exception is about unkown subdomain name is passed on</description>
+        </item>
+    </itemgroup>
+    <itemgroup name="AuthPostTokenExceptions">
+        <item name="UnsupportedGrantType" error_description="The grant type is not supported." error="unsupported_grant_type">
+            <description>The exception is about unsupported grant_type is passed on</description>
+        </item>
+        <item name="InvalidSAML" error_description="Fail to parse SAML assertion." error="invalid_saml">
+            <description>The exception is about invalid saml is passed on</description>
+        </item>
+        <item name="EmptySAML" error_description="Invalid SAML response." error="invalid_saml">
+            <description>The exception is about invalid saml is passed on</description>
+        </item>
+        <item name="UnknownSubdomain" error_description="Unknown subdomain." error="invalid_subdomain">
+            <description>The exception is about unkown subdomain name is passed on</description>
+        </item>
+        <item name="InvalidSubdomain" error_description="Invalid subdomain name." error="invalid_subdomain">
+            <description>The exception is about invalid subdomain name is passed on</description>
+        </item>
+    </itemgroup>
+    <itemgroup name="PostSamlGrantExceptions">
+        <item name="UnknownClient" error_description="Unknown client." error="invalid_client">
+            <description>The exception is about unauthorized client name is passed on</description>
+        </item>
+        <item name="UnknownSubdomain" error_description="Unknown subdomain." error="invalid_subdomain">
+            <description>The exception is about unkown subdomain name is passed on</description>
+        </item>
+        <item name="ParameterMissing" error_description="Required parameter was missing." error="invalid_request">
+            <description>The exception is about required parameter was missing from the REST call</description>
+        </item>
+    </itemgroup>
+    <itemgroup name="AuthPostSamlGrantExceptions">
+        <item name="InvalidSubdomain" error_description="Invalid subdomain name." error="invalid_subdomain">
+            <description>The exception is about invalid subdomain name is passed on</description>
+        </item>
+        <item name="UnknownSubdomain" error_description="Unknown subdomain." error="invalid_subdomain">
+            <description>The exception is about unkown subdomain name is passed on</description>
+        </item>
+        <item name="UnknownClient" error_description="Invalid client credentials." error="invalid_client">
+            <description>The exception is about unauthorized client name is passed on</description>
+        </item>
+        <item name="EmptySAML" error_description="Invalid SAML response." error="invalid_saml">
+            <description>The exception is about invalid saml is passed on</description>
+        </item>
+        <item name="InvalidSAML" error_description="Fail to parse SAML assertion." error="invalid_saml">
+            <description>The exception is about invalid saml is passed on</description>
+        </item>
+    </itemgroup>
+    <itemgroup name="GetTokensExceptions">
+        <item name="InvalidToken" error_description="This token does not exist." error="invalid_token">
+            <description>The exception is about invalid token name is passed on</description>
+        </item>
+        <item name="ParameterMissing" error_description="Required parameter was missing." error="invalid_request">
+            <description>The exception is about required parameter was missing from the REST call</description>
+        </item>
+    </itemgroup>
+    <itemgroup name="DeleteTokensExceptions">
+        <item name="ParameterMissing" error_description="Required parameter was missing." error="invalid_request">
+            <description>The exception is about required parameter was missing from the REST call</description>
+        </item>
+    </itemgroup>
+</testdata>

@@ -1,0 +1,107 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module utils</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>utils</strong></big></big> (version #1, 19th Oct 2011)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/leongh/Workspace/sandbox/oauth_sso_test/sso/utils.py">/Users/leongh/Workspace/sandbox/oauth_sso_test/sso/utils.py</a></font></td></tr></table>
+    <p><tt>utils.py<br>
+&nbsp;<br>
+Contains&nbsp;utilities&nbsp;leveraged&nbsp;by&nbsp;cases<br>
+&nbsp;<br>
+Created&nbsp;by&nbsp;Leong&nbsp;He.<br>
+Copyright&nbsp;(c)&nbsp;2011~2012&nbsp;VMware.&nbsp;All&nbsp;rights&nbsp;reserved.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="ConfigParser.html">ConfigParser</a><br>
+<a href="ast.html">ast</a><br>
+<a href="httplib2.html">httplib2</a><br>
+</td><td width="25%" valign=top><a href="logging.html">logging</a><br>
+<a href="os.html">os</a><br>
+<a href="random.html">random</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+<a href="restclient.rest.html">restclient.rest</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="unittest.html">unittest</a><br>
+<a href="xml.html">xml</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-auth_get_auth"><strong>auth_get_auth</strong></a>(auth_server<font color="#909090">='auth.mozy.com'</font>, partner<font color="#909090">='sha3'</font>, auth_client_id<font color="#909090">='bus_auth_id'</font>)</dt><dd><tt>Get&nbsp;Auth&nbsp;SAML&nbsp;from&nbsp;Horizon</tt></dd></dl>
+ <dl><dt><a name="-get_config"><strong>get_config</strong></a>(option, section<font color="#909090">='sso'</font>, cfg<font color="#909090">='testdata/sso.conf'</font>)</dt><dd><tt>Get&nbsp;configured&nbsp;value&nbsp;from&nbsp;given&nbsp;config&nbsp;file</tt></dd></dl>
+ <dl><dt><a name="-get_dom"><strong>get_dom</strong></a>(file)</dt><dd><tt>Get&nbsp;dom&nbsp;from&nbsp;the&nbsp;given&nbsp;test&nbsp;data&nbsp;xml&nbsp;file</tt></dd></dl>
+ <dl><dt><a name="-get_exception"><strong>get_exception</strong></a>(item, itemgroup, tdf<font color="#909090">='testdata/sso_td.xml'</font>)</dt><dd><tt>Return&nbsp;exceptions&nbsp;including&nbsp;'error_description'&nbsp;and&nbsp;'error'&nbsp;pair&nbsp;as&nbsp;dictionary</tt></dd></dl>
+ <dl><dt><a name="-get_testdata"><strong>get_testdata</strong></a>(item, itemgroup, tdf<font color="#909090">='testdata/sso_td.xml'</font>)</dt><dd><tt>Return&nbsp;values&nbsp;array&nbsp;with&nbsp;given&nbsp;itemgroup&nbsp;and&nbsp;item&nbsp;name</tt></dd></dl>
+ <dl><dt><a name="-handle_itemgroup"><strong>handle_itemgroup</strong></a>(dom, group)</dt></dl>
+ <dl><dt><a name="-handle_items"><strong>handle_items</strong></a>(groupelement, item)</dt></dl>
+ <dl><dt><a name="-handle_values"><strong>handle_values</strong></a>(itemelement)</dt></dl>
+ <dl><dt><a name="-is_same_array"><strong>is_same_array</strong></a>(arrayA, arrayB)</dt><dd><tt>Compare&nbsp;2&nbsp;given&nbsp;arrays&nbsp;if&nbsp;contain&nbsp;the&nbsp;same&nbsp;content.<br>
+True:&nbsp;&nbsp;&nbsp;If&nbsp;2&nbsp;arrays&nbsp;contain&nbsp;the&nbsp;same&nbsp;content&nbsp;regardless&nbsp;of&nbsp;order.<br>
+False:&nbsp;&nbsp;If&nbsp;2&nbsp;arrays&nbsp;contain&nbsp;different&nbsp;content.</tt></dd></dl>
+ <dl><dt><a name="-random_str"><strong>random_str</strong></a>(count<font color="#909090">=10</font>, chars<font color="#909090">='1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'</font>)</dt><dd><tt>Used&nbsp;to&nbsp;generate&nbsp;a&nbsp;random&nbsp;string&nbsp;in&nbsp;which&nbsp;all&nbsp;the&nbsp;character&nbsp;is&nbsp;from&nbsp;'1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'&nbsp;defaultly,&nbsp;you&nbsp;can&nbsp;also&nbsp;specify&nbsp;the&nbsp;source&nbsp;string.<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;-&nbsp;is&nbsp;the&nbsp;lenth&nbsp;of&nbsp;the&nbsp;random&nbsp;string.</tt></dd></dl>
+ <dl><dt><a name="-retrieve_token"><strong>retrieve_token</strong></a>(sso_server<font color="#909090">='10.135.72.27:3081'</font>, partner<font color="#909090">='sha3'</font>, payload<font color="#909090">='assertion=PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz...bj48L3NhbWxwOlJlc3BvbnNlPg%3D%3D&amp;client_id=xanadu'</font>, another<font color="#909090">=False</font>)</dt><dd><tt>Retrieve&nbsp;token&nbsp;grant&nbsp;by&nbsp;posting&nbsp;to&nbsp;/oauth/saml_grant/&lt;partner_subdomain&gt;<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sso_server<br>
+&nbsp;&nbsp;&nbsp;&nbsp;partner&nbsp;subdomain<br>
+&nbsp;&nbsp;&nbsp;&nbsp;payload&nbsp;includes&nbsp;client_id&nbsp;and&nbsp;assertion<br>
+&nbsp;&nbsp;&nbsp;&nbsp;another&nbsp;True&nbsp;-&nbsp;Retrieve&nbsp;a&nbsp;new&nbsp;SAML.&nbsp;False&nbsp;-&nbsp;Return&nbsp;the&nbsp;existing&nbsp;one<br>
+Return:&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;SAML</tt></dd></dl>
+ <dl><dt><a name="-verify_rest_requetfailed_exception"><strong>verify_rest_requetfailed_exception</strong></a>(restexc, expectexc, tc, malparameter<font color="#909090">=None</font>)</dt><dd><tt>Verify&nbsp;the&nbsp;rest.RequestFailed&nbsp;exception&nbsp;equals&nbsp;the&nbsp;expected&nbsp;exception.<br>
+Parameters:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;restexc&nbsp;-&nbsp;rest.RequestFailed&nbsp;exception&nbsp;object<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expectexc&nbsp;-&nbsp;homemade&nbsp;expected&nbsp;exception&nbsp;in&nbsp;dictionary&nbsp;object&nbsp;{"error_description":"Unkown&nbsp;client.","error":"invalid_client"}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tc&nbsp;-&nbsp;the&nbsp;test&nbsp;case&nbsp;instance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;malparameter&nbsp;-&nbsp;the&nbsp;malparameter&nbsp;caused&nbsp;the&nbsp;exception</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>SAMLResponse</strong> = 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgi...+PC9zYW1sOkFzc2VydGlvbj48L3NhbWxwOlJlc3BvbnNlPg=='<br>
+<strong>__author__</strong> = 'Leong He&lt;leongh@mozy.com&gt;'<br>
+<strong>__date__</strong> = '19th Oct 2011'<br>
+<strong>__version__</strong> = '$Revision: #1 $'<br>
+<strong>assertion</strong> = 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgi...+PC9zYW1sOkFzc2VydGlvbj48L3NhbWxwOlJlc3BvbnNlPg=='<br>
+<strong>auth_body</strong> = 'SAMLResponse=PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGl...zYW1sOkFzc2VydGlvbj48L3NhbWxwOlJlc3BvbnNlPg%3D%3D'<br>
+<strong>auth_client_id</strong> = 'bus_auth_id'<br>
+<strong>auth_client_id_no_uri</strong> = 'leong_client_id'<br>
+<strong>auth_client_redirect_uri</strong> = 'http://gimi.mozy.com/just/for/test'<br>
+<strong>auth_client_secret</strong> = 'topsecret'<br>
+<strong>auth_client_secret_no_uri</strong> = '123456'<br>
+<strong>auth_partner</strong> = 'mozytest01'<br>
+<strong>auth_server</strong> = 'auth.mozy.com'<br>
+<strong>b</strong> = {'SAMLResponse': 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgi...+PC9zYW1sOkFzc2VydGlvbj48L3NhbWxwOlJlc3BvbnNlPg=='}<br>
+<strong>client_id</strong> = 'xanadu'<br>
+<strong>client_secret</strong> = 'muse'<br>
+<strong>headers</strong> = {'accept': 'application/json', 'content-type': 'application/x-www-form-urlencoded'}<br>
+<strong>p</strong> = {'assertion': 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgi...+PC9zYW1sOkFzc2VydGlvbj48L3NhbWxwOlJlc3BvbnNlPg==', 'client_id': 'xanadu'}<br>
+<strong>partner</strong> = 'sha3'<br>
+<strong>payload</strong> = 'assertion=PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz...bj48L3NhbWxwOlJlc3BvbnNlPg%3D%3D&amp;client_id=xanadu'<br>
+<strong>sso_server</strong> = '10.135.72.27:3081'<br>
+<strong>token</strong> = None</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Leong&nbsp;He&lt;leongh@mozy.com&gt;</td></tr></table>
+</body></html>
